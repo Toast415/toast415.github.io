@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js" integrity="sha512-CX7sDOp7UTAq+i1FYIlf9Uo27x4os+kGeoT7rgwvY+4dmjqV0IuE/Bl5hVsjnQPQiTOhAX1O2r2j5bjsFBvv/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="/assets/scripts/script.js"></script>
+    <script>
+        title = "Life is a game, so just play it! | ";
+        position = 0;
+        function scrolltitle() {
+            document.title = title.substring(position, title.length) + title.substring(0, position); 
+            position++;
+            if (position > title.length) position = 0;
+            titleScroll = window.setTimeout(scrolltitle,170);
+        }
+        scrolltitle();
+    </script><title>Life is a game, so just play it!</title>
+    <link rel="icon" href="./assets/images/icon.png">
+    <link rel="stylesheet" href="./assets/scripts/style.css">
+</head>
+<body>
+	<!-- <video autoplay muted loop id="bg-video">
+	  <source src="./assets/vids/bg.mp4" type="video/mp4">
+	</video> -->
+	<div class="section-1" id="container">
+		<a class="logo" href="/">
+			<img src="./assets/images/toast.png">
+		</a>
+		<div class="buttons">
+			<!-- LinkedIn -->
+			<a class="social-icon" href="https://www.linkedin.com/in/wisnoob/" target="_blank">
+				<img src="./assets/images/linkedin.png">
+			</a>
+			<!-- Scroll Down -->
+			<a class="small-button scroll-down" href="#about">
+			</a>
+			<!-- Instagram -->
+			<a class="social-icon" href="https://www.instagram.com/wisnoob/" target="_blank">
+				<img src="./assets/images/insta.png">
+			</a>
+		</div>
+    </div>
+    <div class="section-2 content" id="about">
+		<div class="d-flex">
+            <div class="d-flex">
+				<h1 class="heading"><b>//INTRO</b></h1>
+				<a class="column">"Hi, I'm Wisnu Adi Kurniawan. I've had the opportunity to work with wonderful people. I'm a fast problem solver and self-motivated. I do enjoy working remotely alone or in a team."</a>
+			</div>
+			<div class="d-flex">
+				<h1 class="heading">//WEB PORTFOLIO</h1>
+				<a class="column" href="https://dealaccess.com.au/" target="_blank">DealAccess</a>
+				<a class="column" href="https://orbisadvisors.com.au/" target="_blank">Orbis Advisors</a>
+				<a class="column" href="https://timesberwick.com.au/" target="_blank">Times Berwick</a>
+			</div>
+			<div class="d-flex">
+				<h2 class="heading">//MY SKILLS</h2>
+				<p class="column"><span class="count">95</span> IT Related</p>
+			  	<p class="column"><span class="count">90</span> Frontend Development</p>
+				<p class="column"><span class="count">80</span> Graphic Design</p>
+			</div>
+			<div class="d-flex">
+				<h2 class="heading">//CONTACT ME</h2>
+				<a class="column" href="mailto:wisnuadi415@gmail.com" target="_blank">By Email</a>
+				<a class="column" href="https://api.whatsapp.com/send?phone=6281558911373" target="_blank">By Whatsapp</a>
+				<a class="column" href="https://discord.com/invite/c2yBTggm" target="_blank">By Discord</a>
+			</div>
+		</div>
+	</div>
+
+
+</body></html>

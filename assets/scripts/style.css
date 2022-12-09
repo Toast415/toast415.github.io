@@ -1,0 +1,290 @@
+/*
+|-----------------------------------------------
+| Global Styling
+|-----------------------------------------------
+*/
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bgcolor: rgb(255, 255, 255);
+	--accolor: #fd3737;
+    --txtcolor: #d5fff5;
+    --emptcolor: rgb(0, 0, 0);
+    --brdcolor: var(--empc);
+    --linkcolor: rgb(74, 152, 176);
+	--linkalt: rgb(101, 198, 196);
+    --hicolor: hsl(0deg 0% 100% / 26%);
+}
+
+html {
+	scroll-behavior: smooth;
+	scroll-snap-type: y proximity;
+	cursor: url() 0 0, auto;
+}
+
+body {
+    font-family: "Light";
+    color: var(--txtcolor);
+}
+
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    color: var(--emptcolor);
+    background-color: var(--emptcolor);
+}
+
+::selection {
+    background: var(--hicolor);
+}
+ 
+::-moz-selection {
+	background: var(--hicolor);
+	color: white;
+}
+
+/* Define Font */
+@font-face {
+    font-family: "Regular";
+    src: url(/assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Light";
+    src: url(/assets/fonts/Poppins-Light.ttf);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: var(--bgcolor);
+}
+
+a {
+    color: var(--linkcolor);
+    text-decoration: underline;
+  	cursor: pointer;
+}
+
+a:visited{
+	color: var(--linkalt);
+}
+
+hr {
+	border-color: var(--emptcolor);
+}
+
+/* Keyframes */
+@keyframes wheel {
+	to {
+		opacity: 0;
+		top: 50px;
+	}
+}
+
+@-webkit-keyframes wheel {
+	to {
+		opacity: 0;
+		top: 50px;
+	}
+}
+
+/*
+|-----------------------------------------------
+| Content Styling
+|-----------------------------------------------
+*/
+#container {
+    position: fixed;
+    top: 40%;
+    z-index: 1;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+	text-align: center;
+	text-decoration: none;
+	display: block;
+}
+
+.logo > img {
+	width: 20vw;
+}
+
+.buttons {
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.buttons a {
+    display: block;
+    height: 50px;
+}
+
+.buttons a {
+	display: block;
+	height: 50px;
+}
+
+.buttons a:hover {
+	filter: opacity(80%)
+}
+
+.buttons a img {
+	height: inherit;
+}
+
+.scroll-down {
+	width: 50px;
+	height: 70px !important;
+	border: 3px solid #333;
+	border-radius: 60px;
+	position: relative;
+}
+
+.content {
+	background-color: var(--bgcolor);
+	width: 90%;
+	max-width: 1080px;
+	margin: 0 auto;
+	font-size: min(18px, 1.3vw);
+	text-align: center;
+	margin-top: 110vh;
+	height: 85vh;
+	margin-bottom: 5vh;
+	border: solid 5px var(--emptcolor);
+	overflow: auto;
+    scroll-snap-align: start;
+	z-index: 9;
+	position: relative;
+}
+
+.scroll-down::before {
+	content: '';
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #333;
+	border-radius: 50%;
+	opacity: 1;
+	animation: wheel 2s infinite;
+	-webkit-animation: wheel 2s infinite;
+}
+
+.content div {
+	padding: 2vw;
+}
+
+.d-flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	flex-grow: 1;
+	flex-shrink: 1;
+}
+
+.column {
+	transition: all 0.3s ease-in;
+	padding: 1ch;
+	font-size: 1.3rem;
+	margin: 5px;
+	text-decoration: none;
+	position: relative;
+	color: black;
+	flex-grow: 1; 
+	min-width: 25%;
+}
+
+a.column::after {
+	content: "";
+	transition: all 0.3s ease-in;
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	bottom: 0;
+	left: 0;
+	color: var(--accolor);
+	background: var(--accolor);
+	opacity: 0;
+}
+
+a.column:hover::after {
+	transition: all 0.3s ease-in;
+	opacity: 1;
+}
+
+.heading {
+	width: 100%;
+	padding: 1ch;
+	font-size: 1.3rem;
+	margin: 5px;
+	margin-top: 5px;
+    background: var(--accolor);
+    padding: 10px;
+    color: black;
+	font-family: "Regular";
+    font-weight: 700;
+}
+
+.count {
+	display: block;
+	font-size: min(3vw, 50px);
+}
+
+.count::after {
+	content: '%';
+}
+
+#hide {
+    background: none;
+    font-size: 2.7rem;
+    font-family: 'light';
+    color: white;
+    outline: none;
+    border: none;
+    transform: translateX(-50%);
+    left: 50%;
+	  text-decoration: none !important;
+}
+
+#hide img {
+	height: 50px;
+	transform: translateX(-1px);
+}
+
+#hide img:hover {
+	filter: brightness(80%);
+}
+
+.footer {
+	padding: 25px 0;
+	background-color: #000000;
+	color: #fff;
+	text-align: center;
+}
+
+/* Responsive mobile & tablet */
+@media only screen and (max-width: 980px) and (hover: none) and (pointer: coarse) {
+    /* ... */
+    	html {
+    	scroll-snap-type: none !important;
+    	}
+}
