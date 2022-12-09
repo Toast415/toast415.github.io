@@ -10,14 +10,11 @@
 }
 
 :root {
-    --bgcolor: rgb(255, 255, 255);
+    --bgcolor: #edf3e8;
 	--accolor: #fd3737;
-    --txtcolor: #d5fff5;
-    --emptcolor: rgb(0, 0, 0);
-    --brdcolor: var(--empc);
-    --linkcolor: rgb(74, 152, 176);
-	--linkalt: rgb(101, 198, 196);
-    --hicolor: hsl(0deg 0% 100% / 26%);
+    --txtcolor: #3e3b45;
+    --emptcolor: #312e38;
+    --brdcolor: var(--emptcolor);
 }
 
 html {
@@ -40,8 +37,8 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 4px;
-    background-color: #000000;
+    width: 10px;
+    background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -50,23 +47,23 @@ body {
 }
 
 ::selection {
-    background: var(--hicolor);
+    background: var(--emptcolor);
 }
  
 ::-moz-selection {
-	background: var(--hicolor);
+	background: var(--emptcolor);
 	color: white;
 }
 
 /* Define Font */
 @font-face {
     font-family: "Regular";
-    src: url(/assets/fonts/Poppins-Regular.ttf);
+    src: url(./assets/fonts/Poppins-Regular.ttf);
 }
 
 @font-face {
     font-family: "Light";
-    src: url(/assets/fonts/Poppins-Light.ttf);
+    src: url(./assets/fonts/Poppins-Light.ttf);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -109,7 +106,7 @@ hr {
 */
 #container {
     position: fixed;
-    top: 40%;
+    top: 45%;
     z-index: 1;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -125,27 +122,27 @@ hr {
 	width: 20vw;
 }
 
-.buttons {
+.links {
     display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.buttons a {
+.links a {
     display: block;
     height: 50px;
 }
 
-.buttons a {
+.links a {
 	display: block;
 	height: 50px;
 }
 
-.buttons a:hover {
+.links a:hover {
 	filter: opacity(80%)
 }
 
-.buttons a img {
+.links a img {
 	height: inherit;
 }
 
@@ -158,7 +155,7 @@ hr {
 }
 
 .content {
-	background-color: var(--bgcolor);
+	background: url(./assets/images/white-bg.jpg);
 	width: 90%;
 	max-width: 1080px;
 	margin: 0 auto;
@@ -189,7 +186,7 @@ hr {
 	-webkit-animation: wheel 2s infinite;
 }
 
-.content div {
+.content > div {
 	padding: 2vw;
 }
 
@@ -199,6 +196,10 @@ hr {
 	flex-wrap: wrap;
 	flex-grow: 1;
 	flex-shrink: 1;
+}
+
+.row {
+	margin-bottom: 40px;
 }
 
 .column {
