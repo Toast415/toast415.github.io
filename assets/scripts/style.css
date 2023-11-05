@@ -29,6 +29,10 @@ body {
 	cursor: none;
 }
 
+a:-webkit-any-link {
+	cursor: none;
+}
+
 #bg-video {
 	position: fixed;
 	right: 0;
