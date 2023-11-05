@@ -5,16 +5,16 @@
 */
 /* General */
 * {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 :root {
-    --bgcolor: #edf3e8;
+	--bgcolor: #edf3e8;
 	--accolor: #fd3737;
-    --txtcolor: #3e3b45;
-    --emptcolor: #312e38;
-    --brdcolor: var(--emptcolor);
+	--txtcolor: #3e3b45;
+	--emptcolor: #312e38;
+	--brdcolor: var(--emptcolor);
 }
 
 html {
@@ -24,30 +24,31 @@ html {
 }
 
 body {
-    font-family: "Light";
-    color: var(--txtcolor);
+	font-family: "Light";
+	color: var(--txtcolor);
+	cursor: none;
 }
 
 #bg-video {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
-    background-color: transparent;
+	width: 10px;
+	background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    color: var(--emptcolor);
-    background-color: var(--emptcolor);
+	color: var(--emptcolor);
+	background-color: var(--emptcolor);
 }
 
 ::selection {
-    background: var(--emptcolor);
+	background: var(--emptcolor);
 }
  
 ::-moz-selection {
@@ -55,15 +56,46 @@ body {
 	color: white;
 }
 
+/* Custom Cursor */
+.cursor-dot,
+.cursor-dot-outline {
+	pointer-events: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border-radius: 50%;
+	opacity: 0;
+	transform: translate(-50%, -50%);
+	transition: opacity 0.3s ease-in-out,
+		transform 0.3s ease-in-out;
+	z-index: 999999;
+	mix-blend-mode: difference;
+}
+
+.cursor-dot {
+	width: 8px;
+	height: 8px;
+	background-color: #FF502E;
+}
+
+.cursor-dot-outline {
+	width: 40px;
+	height: 40px;
+	background: url(https://sonderling.au/wp-content/uploads/2023/10/oddball-colour-invert.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
 /* Define Font */
 @font-face {
-    font-family: "Regular";
-    src: url(/assets/fonts/Poppins-Regular.ttf);
+	font-family: "Regular";
+	src: url(/assets/fonts/Poppins-Regular.ttf);
 }
 
 @font-face {
-    font-family: "Light";
-    src: url(/assets/fonts/Poppins-Light.ttf);
+	font-family: "Light";
+	src: url(/assets/fonts/Poppins-Light.ttf);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -71,9 +103,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    color: var(--linkcolor);
-    text-decoration: underline;
-  	cursor: pointer;
+	color: var(--linkcolor);
+	text-decoration: underline;
 }
 
 a:visited{
@@ -105,11 +136,11 @@ hr {
 |-----------------------------------------------
 */
 #container {
-    position: fixed;
-    top: 45%;
-    z-index: 1;
-    left: 50%;
-    transform: translate(-50%, -50%);
+	position: fixed;
+	top: 45%;
+	z-index: 1;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .logo {
@@ -123,14 +154,14 @@ hr {
 }
 
 .links {
-    display: flex;
+	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
 .links a {
-    display: block;
-    height: 50px;
+	display: block;
+	height: 50px;
 }
 
 .links a {
@@ -166,7 +197,7 @@ hr {
 	margin-bottom: 5vh;
 	border: solid 5px var(--emptcolor);
 	overflow: auto;
-    scroll-snap-align: start;
+	scroll-snap-align: start;
 	z-index: 9;
 	position: relative;
 }
@@ -238,11 +269,11 @@ a.column:hover::after {
 	font-size: 1.3rem;
 	margin: 5px;
 	margin-top: 5px;
-    background: var(--accolor);
-    padding: 10px;
-    color: black;
+	background: var(--accolor);
+	padding: 10px;
+	color: black;
 	font-family: "Regular";
-    font-weight: 700;
+	font-weight: 700;
 }
 
 .count {
@@ -255,15 +286,15 @@ a.column:hover::after {
 }
 
 #hide {
-    background: none;
-    font-size: 2.7rem;
-    font-family: 'light';
-    color: white;
-    outline: none;
-    border: none;
-    transform: translateX(-50%);
-    left: 50%;
-	  text-decoration: none !important;
+	background: none;
+	font-size: 2.7rem;
+	font-family: 'light';
+	color: white;
+	outline: none;
+	border: none;
+	transform: translateX(-50%);
+	left: 50%;
+	text-decoration: none !important;
 }
 
 #hide img {
